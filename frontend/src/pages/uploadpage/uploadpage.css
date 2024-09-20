@@ -1,0 +1,28 @@
+/* src/pages/UploadPage/UploadPage.css */
+.upload-page {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .loading-bar {
+    margin: 20px auto;
+    width: 50%;
+    background-color: #f0ad4e;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .chart-container {
+    margin-top: 40px;
+    width: 80%;
+    max-width: 800px;
+    height: 50vh; /* Set the height to 50% of the viewport */
+    margin: auto;
+  }
+  
+  input[type='file'] {
+    display: block;
+    margin: 20px auto;
+  }
+  

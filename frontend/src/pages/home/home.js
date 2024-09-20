@@ -11,8 +11,10 @@ function Home() {
         <Link to="/login">
           <button className="register-button">Register Now</button>
         </Link>
+        <Link to="/upload">
+          <button>Upload CSV</button>
+        </Link>
       </header>
-
       {/* Main content can go here */}
     </div>
   );
