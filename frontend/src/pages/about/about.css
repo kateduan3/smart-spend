@@ -1,0 +1,14 @@
+.about {
+    background-color: lightgreen;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .about h1 {
+    color: darkgreen;
+  }
+  
+  .about p {
+    font-size: 18px;
+  }
+  
