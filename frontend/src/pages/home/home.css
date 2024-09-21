@@ -1,37 +1,98 @@
 /* White background for the homepage */
 .home {
-    background-color: #f3f3f3;
-    height: 100vh;
-  }
-  
-  /* Header styling */
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #f8f9fa;
-  }
-  
-  /* Logo styling (left side of the header) */
-  .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-  }
-  
-  /* Register button (right side of the header) */
-  .register-button {
-    background-color: #5f8746;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  
-  .register-button:hover {
-    background-color: #0056b3;
-  }
-  
+  background-color: #f1f1f1;
+  height: 100vh;
+  overflow: hidden; /* Prevent the body from scrolling while the container scrolls */
+}
+
+/* Header styling */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  padding-left: 90px;
+}
+
+.register-button {
+  background-color: #60ae30;
+  color: white;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.register-button:hover {
+  background-color: #0056b3;
+}
+
+/* Scrollable container */
+.home-scroll-container {
+  display: flex;
+  overflow-x: auto;   /* Allow horizontal scrolling */
+  scroll-snap-type: x mandatory;  /* Snap scrolling to sections */
+  -webkit-overflow-scrolling: touch; /* Bouncy scroll effect on mobile */
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+.home-scroll-container::-webkit-scrollbar {
+  display: none; /* Hide the scrollbar */
+}
+
+/* Each home-top should take up full width and be aligned side by side */
+.home-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 90px;
+  width: 100vw;   /* Make each section take full viewport width */
+  height: 70vh;
+  box-sizing: border-box; /* Ensure padding is included in the width */
+  flex-shrink: 0; /* Prevent shrinking when scrolling */
+  scroll-snap-align: start; /* Ensure snapping to the start of each section */
+  transition: transform 0.3s ease-in-out; /* Smooth transitions for bouncy feel */
+}
+
+/* Main content styling */
+.main-content {
+  flex: 1;
+  text-align: left;
+  padding-right: 50px;
+}
+
+.big-text {
+  font-size: 48px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.main-description {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+/* Image section styling */
+.image-section {
+  flex: 1;
+  text-align: right;
+  padding-top: 80px;
+  padding-right:100px;
+}
+
+/* Illustration image styling */
+.illustration-img {
+  max-width: 28vw;
+  height: auto;
+}
+
